@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>JSON</title>
+</head>
+
+<body style="background-color: gray;">
+
+    <!-- <script> 
+        // let user = {
+        //     name: 'Faisal',
+        //     email: 'fasial-f92@hotmail.com',
+        //     age: 27,
+        //     country: 'Saudi Arabia',
+        //     is_student: false,
+        //     is_marred: false,
+        //     ownHous: null
+
+        // }
+
+        // // let js = JSON.stringify(user);
+        // let js = JSON.stringify(user, ['name', 'email'],2);
+        // console.log(js);
+        // let myObject = '{"name":"Faisal","email":"fasial-f92@hotmail.com","age":27,"country":"Saudi Arabia","is_student":false,"is_marred":false,"ownHous":null}';
+        // let par = JSON.parse(myObject);
+        // console.log(par.age + 5);
+    </script> -->
+
+    <script>
+    // setTimeout(() => {
+    //     console.log('Hello Wordl');
+    //     setTimeout(() => {
+    //         console.log('Hello Wordl again');
+    //     }, 3000);
+    // }, 3000);
+    let counter = 0;
+    function greeting() {
+        //console.log(`Hello, ${name}`);
+        console.log(`Hello`);
+    }
+
+    setInterval(() => {
+        let date = new Date();
+        let h = date.getHours();
+        let m = date.getMinutes();
+        let s = date.getSeconds();
+        // console.clear();
+        // console.log(`time is:  ${h}:${m}:${s}`)
+        // counter ++;
+        // console.log(counter)
+    }, 1000);
+
+  let id = setInterval(()=>{
+      console.log('Hello')
+     
+  },1000)
+  setTimeout(()=>{
+          clearInterval(id)
+      },10000)
+    </script>
+    
+
+</body>
+</html>

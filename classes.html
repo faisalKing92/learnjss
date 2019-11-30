@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Rest Parameters</title>
+</head>
+
+<body style="background-color: gray;">
+
+    <script>
+
+        class User {
+            constructor(firstName, lastName, age) {
+                this.firstName = firstName;
+                this.lastName = lastName;
+                this.age = age
+            }
+            static members() {
+                return ["Abubaker", "Fawziah", "Doaa", "Faisal", "Abdul-Rahman", "Asma"]
+            } 
+            get fullName() {
+                return `${this.firstName} ${this.lastName}`;
+            }
+            set setAge(value) {
+                this.age = value;
+            }
+            get setAge() {
+                return this.age
+            }
+            set fullName(value) {
+                const newName = value.split(' ');
+                this.firstName = newName[0];
+                this.lastName = newName[1];
+            }
+            get yearOfBirth() {
+                return new Date().getFullYear() - this.age;
+            }
+            bio() {
+                return `My name is ${this.firstName} and I am ${this.age} years old`;
+            }
+
+        }
+        let admin = new User('Faisal', 'Basbkoor', 27);
+        // console.log(admin.fullName);
+        // console.log(admin.fullName, admin.yearOfBirth);
+        // console.log(admin.yearOfBirth);
+        // admin.setAge(22);
+        // admin.fullName ='Asma Faisal';
+        // console.log(admin.fullName);
+        // console.log(admin.firstName);
+        // console.log(admin.lastName);
+
+        // admin.setAge = 22;
+        // console.log(admin.setAge)
+        console.log(User.members());
+
+class Person extends User {
+    get fullName() {
+        return `${this.lastName}, ${this.firstName}`
+    }
+}
+let person = new Person('Faisal', 'Ahmed', 25);
+console.log(person.fullName)
+
+
+class customArray extends Array {
+    isNotEmpty() {
+        return this.length !== 0;
+    }
+}
+
+let newArray = new Array(1,2,3);
+console.log(newArray.isNotEmpty());
+    </script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Test js</title>
+</head>
+
+<body style="background-color: gray;">
+
+
+    <!-- <script>
+//     alert('Hello World');
+//    let name = prompt("What is your name?", "");
+//    let sure = confirm(`Are You sure your name is ${name}`);
+//    let printMessage = "";
+//    printMessage = sure ?  `Hello, ${name}. You are the best` :  `Hello, edit your name please! :)`;
+//    alert(printMessage);
+    </script> -->
+
+    <!-- <script>
+    // let words = ["Chicago", "Chicago", "fugiat", "New Yourk", 1, 2, 5, "background-color:"," gray;"];
+    // let anotherWords = ['red','blure','black', 'yellow'];
+    // let newArray = words.concat(anotherWords, 0.5, 5, 'hello', 66,'Faisal');
+
+  
+
+
+    // newArray.forEach((value, index, array) => {
+    //     console.log(`${index}: ${value} and the array is: ${array}`);
+    // });
+    //   for(let i = 0; i < words.length; i++) {
+    //     console.log(words[i]);
+    //   }
+    // for(const word of words) {
+    //     console.log(word);
+    // }
+    // words.splice(0,0,"new")
+    </script> -->
+
+
+    <script>
+        // let cars = [
+        //     { name: 'Ford', color: 'Black', model: 2019 },
+        //     { name: 'GMC', color: 'Black', model: 2016 },
+        //     { name: 'Toyota', color: 'Blue', model: 2014 },
+        //     { name: 'Nissan', color: 'Red', model: 2011 },
+        //     { name: 'Nissan', color: 'Red', model: 2022 },
+        //     { name: 'Hyundai', color: 'Gray', model: 2013 },
+        // ]
+        // function sorter(x,y) {
+        //     if(x>y) return 1;
+        //     if(x<y) return -1;
+        //     return 0;
+        // }
+        let number = [0 ,3 ,10, 5, 8, 2, 6, 9, 7, 1, 4];
+
+        let ar=[
+        {id:1,firstname:'ahmad1',lastname:'samser1'},
+        {id:2,firstname:'ahmad2',lastname:'samser2'},
+        {id:3,firstname:'ahmad3',lastname:'samser3'},
+        {id:3,firstname:'ahmad3',lastname:'samser3'},
+        {id:3,firstname:'ahmad3',lastname:'samser3'},
+        {id:3,firstname:'mohammad',lastname:'samser3'}
+    ];
+    let map=ar.map(({id,lastname})=>({id,lastname}));
+    console.log(map);
+        // let sorted = 
+// console.log(number.sort(a,b => a-b));
+//         nn = jjjj.reverse().join('')
+//         console.log(jjjj);
+//         console.log(nn)
+
+        // let cars = ['Ford', 'GMC', 'Toyota', 'GMC', 'Nissan', ['A', 'C'], true, 1, 2, 3, 4];
+        // let newCars = ['Honda', 'hyundai'];
+
+        //         function findWordThenAdd(array, find, add) {
+        //             if (array.includes(find)) {
+        //                 let ind = array.indexOf(find)
+        //                 array.splice(ind+1, 0, add)
+        //             }
+        //         }
+        // findWordThenAdd(cars, "Nissan", "Hello Guys")
+        // console.log(cars)
+        // var filterCars = cars.filter(item => item.color === 'Red').filter(item => item.model > 2010);
+        // console.log(filterCars);
+        // "".startsWith
+        // let mapCars = cars.map(item => item.name).filter(item => item == 'Nissan');
+        // console.log(mapCars);
+// let nes = cars.find(item => {
+//     return item['model'] > 2010
+// });
+// console.log(nes)
+    </script>
+<!-- 
+    <script>
+        // let m = 1000 * 60;
+        // let h = m * 60;
+        // let d = h * 24;
+        // let month = d * 30;
+        let myDate = new Date(2019, 09, 19, 09, 00, 15);
+        
+        
+        // let dateTime = '2019-03-19T13:00:15.500+05:00';
+        let ms = '2012-01-26T13:51:50.417+00:00';
+        let dd = Date.parse(ms);
+        let mm = new Date(dd);
+        console.log(`md: ${dd}`)
+        console.log(`mm: ${mm}`)
+
+
+        // console.log(`parse dd: ${new Date(1327611110417)}`)
+        // let ci =  Date.parse(dateTime);
+        // console.log(ci)
+        // let converted = new Date(1552989615500);
+        // console.log(converted);
+        myDate.setFullYear(2018)
+        console.log(myDate);
+        console.log(getNameOfDay(3));
+        console.log(getNameOfMonth(myDate.getMonth()))
+
+        function getNameOfMonth(num) {
+            switch (num) {
+                case 0:
+                    return 'January';
+                    break;
+                case 1:
+                    return 'February';
+                    break;
+                case 2:
+                    return 'March';
+                case 3:
+                    return 'April';
+                    break;
+                case 4:
+                    return 'May';
+                    break;
+                case 5:
+                    return 'June';
+                case 6:
+                    return 'July';
+                    break;
+                case 7:
+                    return 'August';
+                    break;
+                case 8:
+                    return 'September';
+                    break;
+                case 9:
+                    return 'October';
+                case 10:
+                    return 'November';
+                    break;
+                case 11:
+                    return 'December';
+                    break;
+
+                default:
+                    return 'Non'
+                    break;
+            }
+        }
+
+        function getNameOfDay(num) {
+                switch (num) {
+                case 0:
+                    return 'Monday';
+                    break;
+                case 1:
+                    return 'Tuesday';
+                    break;
+                case 2:
+                    return 'Wednesday';
+                case 3:
+                    return 'Thursday';
+                    break;
+                case 4:
+                    return 'Friday';
+                    break;
+                case 5:
+                    return 'Saturday';
+                case 6:
+                    return 'Sunday';
+                    break;
+                default:
+                return 'Non'
+                    break;
+            }
+            }
+
+        // console.log(myDate);
+        // console.log(`getFullYear: ${myDate.getFullYear()}`);
+        // console.log(`getMonth: ${myDate.getMonth()}`);
+        // console.log(`getDay: ${myDate.getDay()}`);
+        // console.log(`getHours: ${myDate.getHours()}`);
+        // console.log(`getMinutes: ${myDate.getMinutes()}`);
+        // console.log(`getSeconds: ${myDate.getSeconds()}`);
+        // console.log(`getMilliseconds: ${myDate.getMilliseconds()}`);
+        // console.log(`getDate: ${myDate.getDate()}`);
+        // console.log(`getTime: ${myDate.getTime()}`);
+        // console.log(`getTimezoneOffset: ${myDate.getTimezoneOffset()}`);
+    </script> -->
+</body>
+
+</html>

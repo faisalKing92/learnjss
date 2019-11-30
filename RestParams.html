@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Rest Parameters</title>
+</head>
+
+<body style="background-color: gray;">
+
+    <!-- <script>
+        function sum(...Parameters) {
+            var sum = 0;
+            for(parm of Parameters) {
+                sum += parm;
+            }
+            return sum
+        }
+
+        function sum2() {
+            // let sum = 0;
+            // for(arg of arguments) {
+            //     sum += arg;
+            // }
+            let lastArg = arguments.length - 1;
+
+            return `${arguments[0] } ${arguments[lastArg]}`;
+        }
+        console.log(sum(1,2,4,5,6,7))
+        console.log(sum2(1,2,4,5,6,7))
+    </script> -->
+
+<!-- <script>
+    let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+    let arr2 = ("12", "23", "100", "34", "56", "9", "233");
+    // let max = Math.max.apply(1,2,5,225,25,55);
+    let max = Math.max(...arr2);
+    console.log(...arr)
+</script> -->
+
+<script>
+    let vehicle = {
+        name: 'x',
+        year: new Date().getFullYear(),
+        color: 'black',
+        wheels: 4,
+        lifeTime() {
+            return new Date().getFullYear() - this.year;
+        },
+    }
+   
+    let car = {
+        name: 'GMC',
+        year: 2000,
+    }
+    let motocyle = {
+        name: 'z',
+        wheels: 2,
+        year: 2011,
+        __proto__: car,
+        
+    }
+    car.__proto__ = vehicle;
+    console.log(vehicle);
+    console.log(car.lifeTime());
+    console.log(motocyle.lifeTime());
+</script>
+
+
+</body>
+</html>
